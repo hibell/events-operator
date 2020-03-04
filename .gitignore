@@ -1,6 +1,6 @@
 # Executables
 /manager
-/.install
+/.apply-crds
 
 # Temporary Build Files
 build/_output
