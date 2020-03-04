@@ -50,7 +50,7 @@ jobs:
     - make e2e-tests
   - name: Push image
     stage: deploy
-    if: branch = master AND fork = false AND type != pull_request AND env(DOCKER_USERNAME) IS NOT blank AND env(DOCKER_TOKEN) IS NOT blank
+    if: branch = master AND type != pull_request AND env(DOCKER_USERNAME) IS NOT blank AND env(DOCKER_TOKEN) IS NOT blank
     script:
     - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_TOKEN}
     - make push-image
